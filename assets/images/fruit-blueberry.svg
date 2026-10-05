@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>blueberry illustration</title>
+  <ellipse cx="60" cy="70" rx="35" ry="34" fill="#453c70"/>
+  <path d="M60 39C35 5 19 27 42 41C54 48 60 39 60 39Z" fill="#50664b"/>
+  <path d="M61 42Q65 27 68 22" stroke="#69533c" stroke-width="4" fill="none"/>
+</svg>

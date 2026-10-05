@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>Strawberry illustration</title>
+  <path d="M24 48Q18 77 60 110Q103 77 96 48Q92 27 60 34Q29 26 24 48Z" fill="#962638"/>
+  <path d="M60 23L34 41L54 39L60 48L69 37L88 41Z" fill="#50664b"/>
+  <ellipse cx="42" cy="56" rx="2" ry="3" fill="#eed39a"/>
+  <ellipse cx="60" cy="57" rx="2" ry="3" fill="#eed39a"/>
+  <ellipse cx="79" cy="56" rx="2" ry="3" fill="#eed39a"/>
+  <ellipse cx="49" cy="75" rx="2" ry="3" fill="#eed39a"/>
+  <ellipse cx="70" cy="75" rx="2" ry="3" fill="#eed39a"/>
+  <ellipse cx="60" cy="91" rx="2" ry="3" fill="#eed39a"/>
+</svg>
