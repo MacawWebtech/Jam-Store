@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      Template Documentation | Orchard
+      &
+      Jar
+    </title>
+    <meta name="description" content="Installation, customization, form integrations, SEO and asset credits for the Orchard and Jar artisan preserve template.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <link rel="stylesheet" href="../assets/css/image-paths.css">
+    <link rel="stylesheet" href="../assets/css/refinements.css">
+    <link rel="icon" href="../assets/images/logo.svg">
+  </head>
+  <body data-page="documentation.html">
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="../index.html">
+          Orchard
+          &
+          Jar
+        </a>
+        <a class="btn btn-outline" href="../index.html">
+          View the template
+        </a>
+      </div>
+    </header>
+    <main id="main">
+      <section class="section">
+        <div class="container legal-copy">
+          <p class="eyebrow">
+            Stackly HTML template · Version 1.0.0
+          </p>
+          <h1>
+            Your little template guide.
+          </h1>
+          <p>
+            A complete, locally hosted frontend storefront for a fictional artisan preserve brand. All authored code is readable and expanded line by line.
+          </p>
+          <h2>
+            Installation
+          </h2>
+          <p>
+            Extract the ZIP and open index.html. All assets are included. Optionally serve this folder using a local HTTP server. No framework or build is required.
+          </p>
+          <h2>
+            Files
+            &
+            pages
+          </h2>
+          <p>
+            There are 19 storefront pages plus this documentation. CSS, JavaScript, images and vendor files are in assets/. The two homepages share a visual system but use different structures. README.md lists every page and file.
+          </p>
+          <h2>
+            Colors, fonts
+            &
+            layout
+          </h2>
+          <p>
+            Edit the variables at the top of assets/css/style.css. Update the matching dark variables in dark-mode.css. The interface uses only black, white and berry primary (#742f3e), including icons. Photographs retain their natural colors. Compact spacing, matching card heights and optional motion are in refinements.css. Typography uses locally available system fonts. Screen-size adjustments are in responsive.css and direction-specific details in rtl.css.
+          </p>
+          <h2>
+            Brand, photographs
+            &
+            products
+          </h2>
+          <p>
+            Replace assets/images/logo.svg and update static header/footer text. All image slots are replaceable. See IMAGE-REPLACEMENT-GUIDE.md. Testimonial portraits are assets/images/testimonials/maya.webp, arun.webp and leela.webp. Heading background paths are grouped in assets/css/image-paths.css. Change image files or their HTML paths, keeping meaningful alt text and dimensions. Product jar images, gift set cards and maker portraits are original illustrations; the three lifestyle photos are AI-generated demo imagery. Use verified actual product photography for a real store.
+          </p>
+          <h2>
+            Catalogue
+            &
+            journal
+          </h2>
+          <p>
+            Catalogue filters use data-name, data-fruit, data-seasonal and data-price attributes in products.html. Matching detail pages use ?product=strawberry or another listed slug. Journal pages use ?article=harvest and topic/search parameters. Product and article detail content is pre-rendered in HTML, then selected by a small script.
+          </p>
+          <h2>
+            Dark mode
+            &
+            RTL
+          </h2>
+          <p>
+            The header buttons control the shared theme and direction. Preferences are stored only in localStorage. Initial theme follows the operating system. Logical CSS properties mirror layout without reversing English words.
+          </p>
+          <h2 id="forms">
+            Forms, map
+            &
+            optional payments
+          </h2>
+          <p>
+            Every form is a local validation demo. Nothing is sent or saved. In main.js, replace the relevant initForms demo submit handler with your actual form service integration. Possible providers include Formspree or Netlify Forms for enquiries, and Mailchimp or ConvertKit for newsletters. Use your own verified endpoint, never browser-visible secret credentials.
+          </p>
+          <p>
+            The map is a labelled placeholder: add your real shop address and approved map embed. Product controls create an enquiry link rather than an order. Stripe/PayPal are optional future integrations; no checkout or payment processor is wired. Account pages require a genuine authentication integration before they can be used for login.
+          </p>
+          <h2>
+            SEO
+            &
+            information accuracy
+          </h2>
+          <p>
+            Each page has a title, description, canonical placeholder and Open Graph text. Replace https://example.com/ throughout metadata, JSON-LD, sitemap.xml and robots.txt with your final domain. Product and article selections update descriptive metadata. Nutrition, prices, team profiles, address and testimonials are demo information and must be replaced with verified business data.
+          </p>
+          <h2>
+            Accessibility
+            &
+            motion
+          </h2>
+          <p>
+            Use the keyboard to test the skip link, navigation, forms and FAQs. Keep labels, focus outlines, contrast and image alt text when customizing. Reduced-motion preference disables optional reveal/hover movement. This template does not claim formal accessibility certification.
+          </p>
+          <h2>
+            QA
+          </h2>
+          <p>
+            Review QA-REPORT.md for the exact checks run and any browser/platform limitations. Recheck all pages after changing content or images.
+          </p>
+          <h2>
+            Credits
+            &
+            licences
+          </h2>
+          <p>
+            Bootstrap 5.3.3 and Bootstrap Icons 1.11.3 are MIT-licensed. Copyright notices and icon license are bundled. Lifestyle scenes were created with OpenAI imagegen. Product and editorial illustrations, fruit SVGs and logo were originally authored for this template. System fonts avoid external font services. No third-party stock image was packaged.
+          </p>
+          <h2>
+            Before launch
+          </h2>
+          <p>
+            Replace fictional information, verify all product labels, connect real services if needed, configure your domain and review real business policies. Read README.md for the full setup and customization checklist.
+          </p>
+          <a class="btn btn-primary" href="../index.html">
+            Back to the pantry
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
