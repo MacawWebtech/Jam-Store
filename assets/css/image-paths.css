@@ -1,0 +1,66 @@
+/* REPLACEABLE IMAGE PATHS
+   Replace a listed file with your own image to keep HTML unchanged.
+   Or change only its URL below (JPG, PNG and WebP all work).
+   Paths are relative to this stylesheet.
+*/
+body[data-page='index.html'] {
+  --page-heading-image: url('../images/headings/home-1.jpg');
+}
+body[data-page='home-2.html'] {
+  --page-heading-image: url('../images/headings/home-2.jpg');
+}
+body[data-page='about.html'] {
+  --page-heading-image: url('../images/headings/about.jpg');
+}
+body[data-page='products.html'] {
+  --page-heading-image: url('../images/headings/products.jpg');
+}
+body[data-page='product-details.html'] {
+  --page-heading-image: url('../images/headings/products1.jpg');
+}
+body[data-page='gifting.html'] {
+  --page-heading-image: url('../images/headings/gifting.jpg');
+}
+body[data-page='bulk-orders.html'] {
+  --page-heading-image: url('../images/headings/bo.jpg');
+}
+body[data-page='pricing.html'] {
+  --page-heading-image: url('../images/headings/pr.jpg');
+}
+body[data-page='blog.html'] {
+  --page-heading-image: url('../images/headings/journal.jpg');
+}
+body[data-page='blog-details.html'] {
+  --page-heading-image: url('../images/headings/journal-details.jpg');
+}
+body[data-page='contact.html'] {
+  --page-heading-image: url('../images/headings/contact.jpg');
+}
+body[data-page='login.html'] {
+  --page-heading-image: url('../images/headings/login.jpg');
+}
+body[data-page='register.html'] {
+  --page-heading-image: url('../images/headings/register.jpg');
+}
+body[data-page='forgot-password.html'] {
+  --page-heading-image: url('../images/headings/forgot-password.jpg');
+}
+body[data-page='404.html'] {
+  --page-heading-image: url('../images/headings/404.jpg');
+}
+body[data-page='coming-soon.html'] {
+  --page-heading-image: url('../images/headings/coming-soon.jpg');
+}
+body[data-page='privacy.html'] {
+  --page-heading-image: url('../images/headings/privacy.webp');
+}
+body[data-page='terms.html'] {
+  --page-heading-image: url('../images/headings/terms.webp');
+}
+body[data-page='accessibility.html'] {
+  --page-heading-image: url('../images/headings/accessibility.webp');
+}
+
+body[data-page='documentation.html'] {
+  --page-heading-image: url('../images/headings/about.webp');
+}

@@ -1,0 +1,63 @@
+/* Black, white and the same berry primary in both themes. */
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --color-primary: #742f3e;
+  --color-primary-hover: #742f3e;
+  --color-secondary: #ffffff;
+  --color-accent: #ffffff;
+  --color-bg: #000000;
+  --color-surface: #000000;
+  --color-soft: #000000;
+  --color-text: #ffffff;
+  --color-muted: #ffffff;
+  --color-border: #ffffff;
+}
+html[data-theme='dark'] .btn-primary,
+html[data-theme='dark'] .btn-primary:hover {
+  color: #ffffff;
+}
+html[data-theme='dark'] .announcement,
+html[data-theme='dark'] .cta,
+html[data-theme='dark'] .flavour-section,
+html[data-theme='dark'] .sourcing-section {
+  background: #742f3e;
+}
+html[data-theme='dark'] .brand img {
+  filter: none;
+}
+html[data-theme='dark'] .cta .btn {
+  color: #000000;
+}
+html[data-theme='dark'] .sourcing-statement .btn:hover {
+  color: #ffffff;
+}
+/* Berry on black is insufficient for small text. Use white for these labels,
+   reserving berry for filled buttons, panels and photo overlays. */
+html[data-theme='dark'] a:hover,
+html[data-theme='dark'] em,
+html[data-theme='dark'] .text-link,
+html[data-theme='dark'] .main-nav a[aria-current],
+html[data-theme='dark'] .price,
+html[data-theme='dark'] .detail-price,
+html[data-theme='dark'] .bundle-price,
+html[data-theme='dark'] .format-size,
+html[data-theme='dark'] .timeline li > span,
+html[data-theme='dark'] .feature-price strong,
+html[data-theme='dark'] .gift-card-bottom strong,
+html[data-theme='dark'] .contact-details dt i,
+html[data-theme='dark'] .map-placeholder i,
+html[data-theme='dark'] .stars,
+html[data-theme='dark'] .field-error,
+html[data-theme='dark'] .form-status.error,
+html[data-theme='dark'] .account-crosslink a {
+  color: #ffffff;
+}
+html[data-theme='dark'] .btn-outline:hover,
+html[data-theme='dark'] .gallery-thumb.active,
+html[data-theme='dark'] .pricing-card.featured,
+html[data-theme='dark'] .gift-choices label:has(input:checked) {
+  border-color: #ffffff;
+}
+html[data-theme='dark'] :focus-visible {
+  outline-color: #ffffff;
+}

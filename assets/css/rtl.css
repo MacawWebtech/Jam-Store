@@ -1,0 +1,52 @@
+/* Logical properties handle spacing, placement, forms and breadcrumbs.
+   Direction changes layout only; English words remain unchanged. */
+html[dir='rtl'] .hero-photo > img,
+html[dir='rtl'] .inner-hero-image img,
+html[dir='rtl'] .account-picture img {
+  border-radius: 8px 180px 8px 8px;
+}
+html[dir='rtl'] .farm-image::after {
+  background: linear-gradient(270deg, #000000e6 0%, #000000cc 44%, #00000066 100%);
+}
+html[dir='rtl'] .text-link .bi-arrow-right,
+html[dir='rtl'] .btn .bi-arrow-right,
+html[dir='rtl'] .article-navigation i {
+  transform: scaleX(-1);
+}
+html[dir='rtl'] .input-action input {
+  border-radius: 0 3px 3px 0;
+}
+html[dir='rtl'] .photo-caption {
+  padding: 20px 20px 20px 64px;
+}
+/* Keep the English demo copy in its natural reading order while
+   the surrounding grids, navigation, controls and spacing mirror. */
+html[dir='rtl'] body {
+  text-align: right;
+}
+html[dir='rtl'] h1,
+html[dir='rtl'] h2,
+html[dir='rtl'] h3,
+html[dir='rtl'] p,
+html[dir='rtl'] blockquote,
+html[dir='rtl'] dt,
+html[dir='rtl'] dd,
+html[dir='rtl'] label,
+html[dir='rtl'] legend {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: inherit;
+}
+html[dir='rtl'] .price,
+html[dir='rtl'] .badge,
+html[dir='rtl'] .brand > span,
+html[dir='rtl'] .breadcrumbs > span,
+html[dir='rtl'] .breadcrumbs > a {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+html[dir='rtl'] input[type='email'],
+html[dir='rtl'] input[type='tel'] {
+  direction: ltr;
+  text-align: right;
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "strawberry",
+    "name": "Heritage Strawberry Preserve",
+    "fruit": "Strawberry",
+    "price": 285
+  },
+  {
+    "id": "mango",
+    "name": "Golden Mango Jam",
+    "fruit": "Mango",
+    "price": 310
+  },
+  {
+    "id": "peach",
+    "name": "Orchard Peach Preserve",
+    "fruit": "Peach",
+    "price": 295
+  },
+  {
+    "id": "mixed-berry",
+    "name": "Wild Berry Breakfast Jam",
+    "fruit": "Mixed Berry",
+    "price": 330
+  },
+  {
+    "id": "orange",
+    "name": "Seville Orange Marmalade",
+    "fruit": "Orange",
+    "price": 275
+  },
+  {
+    "id": "fig",
+    "name": "Spiced Fig Preserve",
+    "fruit": "Fig",
+    "price": 345
+  },
+  {
+    "id": "pineapple",
+    "name": "Pineapple Vanilla Jam",
+    "fruit": "Pineapple",
+    "price": 305
+  },
+  {
+    "id": "apple",
+    "name": "Apple Cinnamon Preserve",
+    "fruit": "Apple",
+    "price": 260
+  },
+  {
+    "id": "raspberry",
+    "name": "Garden Raspberry Jam",
+    "fruit": "Raspberry",
+    "price": 325
+  },
+  {
+    "id": "blueberry",
+    "name": "Blueberry Lemon Preserve",
+    "fruit": "Blueberry",
+    "price": 340
+  },
+  {
+    "id": "blackberry",
+    "name": "Hedgerow Blackberry Jam",
+    "fruit": "Blackberry",
+    "price": 335
+  },
+  {
+    "id": "seasonal",
+    "name": "Autumn Pear & Ginger",
+    "fruit": "Seasonal Specials",
+    "price": 315
+  }
+]

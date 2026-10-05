@@ -1,0 +1,1776 @@
+/* ==================================================
+   Requested refinements — structure and content retained
+   Palette: black, white, berry (#742f3e).
+   Photos deliberately retain their natural colors.
+   ================================================== */
+:root {
+  --section-space: 56px;
+  --motion-duration: 520ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* Balanced whitespace, without oversized blank gaps. */
+.section-heading {
+  margin-bottom: 28px;
+  gap: 24px;
+}
+h1, h2, h3 {
+  margin-bottom: 20px;
+}
+p {
+  margin-bottom: 20px;
+}
+.home-hero {
+  padding-block: 32px 40px;
+}
+.hero-layout, .editorial, .featured-product,
+.detail-top, .detail-info, .account-layout,
+.contact-layout, .enquiry-layout, .gift-builder-layout,
+.packaging-grid, .bulk-comparison {
+  gap: 40px;
+}
+.hero-copy {
+  padding-block: 8px;
+}
+.hero-photo > img {
+  height: 500px;
+}
+.editorial-image img {
+  height: 400px;
+}
+.story-section {
+  padding-bottom: 24px;
+}
+.values-grid, .testimonial-grid, .maker-grid,
+.gift-grid, .pricing-grid, .format-grid,
+.journal-grid, .product-grid, .process-list {
+  gap: 24px;
+}
+.newsletter-section {
+  padding-block: 40px;
+}
+.newsletter {
+  gap: 32px;
+}
+.farm-hero {
+  min-height: 570px;
+}
+.farm-hero-content {
+  padding-block: 88px;
+}
+.harvest-section {
+  padding-block: 32px;
+}
+.inner-hero {
+  padding-block: 28px 36px;
+}
+.breadcrumbs {
+  margin-bottom: 24px;
+}
+.detail-section {
+  padding-top: 24px;
+}
+.detail-info {
+  padding-block: 40px;
+}
+.product-story {
+  padding-top: 36px;
+}
+.timeline li {
+  padding-block: 24px;
+  gap: 32px;
+}
+.map-placeholder {
+  padding-block: 40px;
+}
+.account-section {
+  padding-block: 40px;
+}
+.account-picture img {
+  height: 560px;
+}
+.account-copy {
+  max-width: none;
+}
+/* Only the main page-title area gets a fitted image.
+   Image is an actual background, never a floating layer over the copy.
+   A black scrim protects white text in both themes. */
+.inner-hero, .home-hero, .page-heading {
+  background-image: linear-gradient(#000000d9, #000000d9), var(--page-heading-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+.inner-hero {
+  border-bottom-color: #000000;
+}
+.home-hero {
+  background-image: linear-gradient(#000000e6, #000000d9), var(--page-heading-image);
+}
+.inner-hero h1, .inner-hero p, .inner-hero .eyebrow,
+.inner-hero .breadcrumbs, .inner-hero .breadcrumbs a,
+.home-hero h1, .home-hero p, .home-hero .eyebrow,
+.home-hero em, .home-hero .seal,
+.page-heading h1, .page-heading p, .page-heading .eyebrow,
+.page-heading .error-code {
+  color: #ffffff;
+}
+.home-hero .little-line {
+  background: #ffffff;
+}
+.home-hero .seal {
+  border-color: #ffffff;
+}
+.home-hero .btn-outline {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.home-hero .btn-outline:hover {
+  color: #000000;
+  background: #ffffff;
+}
+.home-hero .photo-caption span {
+  color: #000000;
+}
+.section-heading {
+  padding: 0;
+  border-radius: var(--radius);
+  align-items: center;
+}
+.section-heading > div {
+  min-width: 0;
+}
+.section-heading .eyebrow {
+  margin-bottom: 12px;
+}
+.section-heading h2 {
+  margin-bottom: 12px;
+}
+.page-heading {
+  position: relative;
+  padding: 28px;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+.page-heading p:last-child {
+  margin-bottom: 0;
+}
+.product-heading h1 {
+  font-size: clamp(34px, 3.6vw, 52px);
+}
+.article-heading .article-meta {
+  border-color: #ffffff;
+  padding-bottom: 0;
+}
+.error-heading .error-code {
+  font-size: 72px;
+  margin-bottom: 16px;
+}
+.error-heading h1 {
+  font-size: 42px;
+}
+.farm-image::after {
+  background: linear-gradient(90deg, #000000e6, #00000099);
+}
+html[dir='rtl'] .farm-image::after {
+  background: linear-gradient(270deg, #000000e6, #00000099);
+}
+.farm-hero em, .farm-hero .eyebrow {
+  color: #ffffff;
+}
+/* Cards and image slots share a consistent height and baseline. */
+.product-grid, .journal-grid, .testimonial-grid,
+.gift-grid, .pricing-grid, .format-grid, .maker-grid {
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}
+.product-card, .journal-card, .testimonial,
+.gift-card, .pricing-card, .format-grid article,
+.maker-grid article, .values-grid article, .supply-grid article {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.product-image img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.product-title h3 {
+  min-block-size: 3.45em;
+}
+.product-content > p:not(.eyebrow) {
+  min-block-size: 4.95em;
+}
+.journal-card > a {
+  display: block;
+}
+.journal-card > a img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.journal-card > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-block-start: 20px;
+}
+.journal-card h3 {
+  min-block-size: 2.3em;
+}
+.journal-card > div > p:not(.eyebrow) {
+  min-block-size: 4.95em;
+}
+.journal-card .text-link {
+  margin-top: auto;
+}
+.gift-card > img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.gift-card h3 {
+  min-block-size: 2.3em;
+}
+.gift-card > div > p:not(.eyebrow) {
+  min-block-size: 6.6em;
+}
+.pricing-card > p:not(.eyebrow) {
+  min-block-size: 3.3em;
+}
+.testimonial {
+  padding: 24px;
+}
+.testimonial blockquote {
+  flex: 1;
+  font-size: 21px;
+  margin-bottom: 24px;
+}
+.testimonial figcaption {
+  margin-top: auto;
+  align-items: center;
+}
+.testimonial .avatar {
+  display: block;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+}
+.maker-grid .maker-portrait {
+  flex-shrink: 0;
+}
+.maker-grid h3, .values-grid h3, .supply-grid h3 {
+  min-block-size: 2.3em;
+}
+.maker-grid article > p:last-child,
+.values-grid article > p:last-child,
+.supply-grid article > p:last-child {
+  margin-bottom: 0;
+}
+.horizontal-products article {
+  height: 100%;
+}
+.horizontal-products img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.gallery-main img {
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+/* Footer: no orphaned link column or oversized blank lower area. */
+.site-footer {
+  padding-block: 40px 16px;
+}
+.footer-grid {
+  gap: 32px;
+  padding-bottom: 28px;
+  align-items: start;
+}
+.footer-grid > div:first-child > p {
+  margin-block: 16px;
+}
+.footer-grid > div:first-child > .eyebrow {
+  margin-bottom: 12px;
+}
+.footer-grid h2 {
+  margin-block: 4px 12px;
+}
+.footer-grid > div:not(:first-child) > a {
+  min-height: 36px;
+  padding-block: 6px;
+}
+.footer-bottom {
+  padding-top: 16px;
+  gap: 16px;
+}
+/* Subtle shared motion: reveal, focus/hover lift and a restrained hero entrance.
+   No endlessly moving elements. Content stays visible without JavaScript. */
+.btn, .icon-button, .text-link,
+.product-card, .journal-card, .gift-card,
+.testimonial, .pricing-card, .maker-grid article,
+.values-grid article, .supply-grid article {
+  transition: transform 240ms var(--motion-ease),
+    background-color 180ms ease, border-color 180ms ease;
+}
+.motion-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease);
+}
+.motion-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.hero-copy, .inner-hero-copy, .farm-hero-content, .page-heading {
+  animation: heading-arrive 620ms var(--motion-ease) both;
+}
+@keyframes heading-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover, .icon-button:hover {
+    transform: translateY(-2px);
+  }
+  .product-card:hover, .journal-card:hover,
+  .gift-card:hover, .testimonial:hover,
+  .pricing-card:hover, .maker-grid article:hover {
+    transform: translateY(-4px);
+  }
+  .editorial-image img, .gift-card > img, .journal-card img {
+    transition: transform 600ms var(--motion-ease);
+  }
+  .editorial-image {
+    overflow: hidden;
+    border-radius: var(--radius);
+  }
+  .editorial-image:hover img {
+    transform: scale(1.025);
+  }
+}
+@media (max-width: 1023px) {
+  :root {
+    --section-space: 36px;
+    --motion-duration: 380ms;
+  }
+  .container {
+    width: calc(100% - 40px);
+  }
+  .home-hero {
+    padding-block: 28px;
+  }
+  .hero-layout, .editorial, .featured-product,
+  .detail-top, .detail-info, .contact-layout,
+  .enquiry-layout, .gift-builder-layout,
+  .packaging-grid, .bulk-comparison, .account-layout {
+    gap: 28px;
+  }
+  .hero-photo > img {
+    height: 380px;
+  }
+  .editorial-image img {
+    height: 340px;
+  }
+  .section-heading {
+    padding: 0;
+    margin-bottom: 24px;
+    gap: 16px;
+  }
+  .values-grid, .testimonial-grid, .maker-grid,
+  .gift-grid, .pricing-grid, .format-grid, .journal-grid,
+  .product-grid, .process-list {
+    gap: 20px;
+  }
+  .fruit-section, .harvest-section, .newsletter-section {
+    padding-block: 28px;
+  }
+  .inner-hero {
+    padding-block: 24px 28px;
+  }
+  .page-heading {
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .farm-hero {
+    min-height: 500px;
+  }
+  .farm-hero-content {
+    padding-block: 64px 80px;
+  }
+  .farm-story-grid img {
+    height: 360px;
+  }
+  .newsletter {
+    gap: 24px;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    padding-bottom: 24px;
+  }
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    column-gap: 24px;
+    align-items: center;
+  }
+  .footer-grid > div:first-child > .brand {
+    grid-column: 1;
+  }
+  .footer-grid > div:first-child > p:not(.eyebrow) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    max-width: none;
+    margin: 0;
+  }
+  .footer-grid > div:first-child > .eyebrow {
+    grid-column: 1;
+    margin-block: 10px;
+  }
+  .footer-grid > div:first-child > .social-links {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+  }
+  .footer-grid > div:last-child {
+    grid-column: auto;
+  }
+  .footer-bottom {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-footer {
+    padding-block: 28px 12px;
+  }
+}
+@media (max-width: 767px) {
+  .section-heading {
+    align-items: start;
+  }
+  .editorial-image img {
+    height: 320px;
+  }
+  .account-section {
+    padding-block: 28px;
+  }
+  .contact-layout, .enquiry-layout, .gift-builder-layout,
+  .packaging-grid, .bulk-comparison {
+    gap: 24px;
+  }
+  .gift-card-bottom {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media (max-width: 639px) {
+  :root {
+    --section-space: 28px;
+    --motion-duration: 320ms;
+  }
+  .container {
+    width: calc(100% - 32px);
+  }
+  h1, h2, h3 {
+    margin-bottom: 16px;
+  }
+  p {
+    margin-bottom: 16px;
+  }
+  .home-hero {
+    padding-block: 24px;
+  }
+  .hero-layout, .editorial, .featured-product,
+  .detail-top, .detail-info, .account-layout,
+  .error-layout {
+    gap: 24px;
+  }
+  .hero-copy .eyebrow {
+    margin-bottom: 16px;
+  }
+  .hero-proof {
+    margin-top: 20px;
+  }
+  .hero-photo > img {
+    height: 290px;
+  }
+  .promise-strip .container {
+    padding-block: 16px;
+    gap: 12px;
+  }
+  .section-heading {
+    padding: 18px;
+    margin-bottom: 20px;
+  }
+  .section-heading h2 {
+    font-size: 29px;
+    margin-bottom: 10px;
+  }
+  .section-heading p {
+    font-size: 13px;
+  }
+  .inner-hero {
+    padding-block: 20px 24px;
+  }
+  .inner-hero-image img {
+    height: 220px;
+  }
+  .breadcrumbs {
+    margin-bottom: 20px;
+  }
+  .hero-description {
+    font-size: 14px;
+  }
+  .page-heading {
+    padding: 20px;
+  }
+  .account-heading h1, .article-heading h1,
+  .product-heading h1, .error-heading h1 {
+    font-size: 34px;
+  }
+  .editorial-image img {
+    height: 270px;
+  }
+  .story-section {
+    padding-bottom: 16px;
+  }
+  .product-grid {
+    gap: 24px 14px;
+  }
+  .product-title h3 {
+    font-size: 20px;
+    min-block-size: 3.45em;
+  }
+  .product-content > p:not(.eyebrow) {
+    min-block-size: 6.6em;
+  }
+  .product-content .text-link {
+    min-height: 44px;
+  }
+  .journal-grid, .testimonial-grid, .values-grid,
+  .gift-grid, .pricing-grid, .maker-grid, .format-grid {
+    gap: 20px;
+  }
+  .journal-card h3 {
+    min-block-size: 2.3em;
+    font-size: 26px;
+  }
+  .testimonial {
+    padding: 20px;
+  }
+  .testimonial blockquote {
+    margin-bottom: 20px;
+    font-size: 21px;
+  }
+  .fruit-section, .harvest-section, .newsletter-section {
+    padding-block: 24px;
+  }
+  .process-list li {
+    padding-top: 20px;
+    gap: 18px;
+  }
+  .cta .container {
+    gap: 24px;
+  }
+  .cta h2 {
+    font-size: 32px;
+  }
+  .farm-hero {
+    min-height: 460px;
+  }
+  .farm-hero-content {
+    padding-block: 48px 72px;
+  }
+  .farm-hero h1 {
+    font-size: 52px;
+  }
+  .farm-note {
+    bottom: 18px;
+  }
+  .farm-story-grid {
+    gap: 24px;
+  }
+  .farm-story-grid img {
+    height: 300px;
+  }
+  .story-note {
+    padding-top: 24px;
+    gap: 16px;
+  }
+  .large-number {
+    margin-bottom: 16px;
+  }
+  .catalogue-tools {
+    padding-bottom: 24px;
+    margin-bottom: 20px;
+  }
+  .results-row {
+    margin-bottom: 24px;
+  }
+  .detail-info {
+    padding-block: 28px;
+  }
+  .product-story {
+    padding-top: 24px;
+  }
+  .form-field {
+    margin-bottom: 16px;
+  }
+  .enquiry-form, .map-placeholder > div, .nutrition-panel {
+    padding: 20px;
+  }
+  .contact-details dd {
+    margin-bottom: 20px;
+  }
+  .map-placeholder {
+    padding: 24px 12px;
+  }
+  .faq-list summary {
+    padding-block: 20px;
+    font-size: 21px;
+  }
+  .timeline li {
+    padding-block: 20px;
+  }
+  .pricing-card, .format-grid article {
+    padding: 24px;
+  }
+  .bundle-price {
+    margin-bottom: 24px;
+  }
+  .comparison-table th, .comparison-table td {
+    padding-block: 12px;
+  }
+  .article-cover {
+    margin-block: 24px;
+  }
+  .article-body > section {
+    margin-bottom: 28px;
+  }
+  .article-quote {
+    margin-block: 28px;
+  }
+  .recipe-note {
+    margin-bottom: 24px;
+  }
+  .article-sidebar {
+    padding-top: 24px;
+  }
+  .pagination {
+    margin-top: 28px;
+  }
+  .coming-layout img {
+    height: 210px;
+    margin-block: 24px;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px 12px;
+    padding-bottom: 20px;
+  }
+  .footer-grid > div:first-child {
+    display: block;
+  }
+  .footer-grid > div:first-child > p:not(.eyebrow) {
+    margin-block: 12px;
+    font-size: 12px;
+  }
+  .footer-grid > div:first-child > .eyebrow {
+    font-size: 8px;
+    margin-block: 10px;
+  }
+  .footer-grid > div:first-child > .social-links {
+    margin-top: 0;
+  }
+  .footer-grid h2 {
+    font-size: 19px;
+    min-block-size: 2.3em;
+    margin-bottom: 6px;
+  }
+  .footer-grid > div:not(:first-child) > a {
+    font-size: 11px;
+    line-height: 1.5;
+    min-height: 44px;
+    padding-block: 6px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+    padding-top: 12px;
+  }
+  .footer-bottom > div {
+    gap: 0 16px;
+    width: 100%;
+  }
+  .footer-bottom a {
+    min-height: 44px;
+  }
+}
+@media (max-width: 359px) {
+  .hero-photo > img {
+    height: 260px;
+  }
+  .footer-grid {
+    column-gap: 10px;
+  }
+  .footer-grid h2 {
+    font-size: 17px;
+  }
+  .footer-grid > div:not(:first-child) > a {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-reveal, .hero-copy, .inner-hero-copy,
+  .farm-hero-content, .page-heading {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Content-focused page headers, consistent reading sizes and compact layouts. */
+:root {
+  --section-space: 36px;
+  --container-width: 1600px;
+}
+.container {
+  width: calc(100% - 48px);
+}
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+body p,
+body .hero-description,
+body .article-lead,
+body .legal-copy p,
+body blockquote {
+  font-size: 16px;
+  line-height: 1.6;
+}
+body p {
+  margin-bottom: 16px;
+}
+body .eyebrow {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+body .btn,
+body .text-link,
+body input,
+body select,
+body textarea,
+body label,
+body .form-status,
+body .footer-grid > div:not(:first-child) > a,
+body .footer-bottom,
+body .footer-grid > div:first-child > p {
+  font-size: 16px;
+}
+body h1 {
+  font-size: clamp(36px, 4vw, 56px);
+}
+body h2 {
+  font-size: clamp(28px, 3vw, 36px);
+}
+body h3 {
+  font-size: 24px;
+}
+body .section-heading {
+  padding: 0;
+  background: transparent;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+body .section-heading h2,
+body .section-heading p,
+body .section-heading .eyebrow {
+  color: var(--color-text);
+}
+body .section-heading .btn-outline {
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+body .section-heading .btn-outline:hover {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+.section-heading p:last-child,
+.editorial-copy,
+.farm-story-grid > div > p,
+.legal-copy,
+.newsletter > div > p,
+.sourcing-statement {
+  max-width: none;
+}
+.hero-layout, .editorial, .featured-product,
+.detail-top, .detail-info, .account-layout,
+.contact-layout, .enquiry-layout, .gift-builder-layout,
+.packaging-grid, .bulk-comparison {
+  gap: 28px;
+}
+body .product-content > p:not(.eyebrow),
+body .journal-card > div > p:not(.eyebrow),
+body .gift-card > div > p:not(.eyebrow),
+body .pricing-card > p:not(.eyebrow) {
+  min-block-size: 0;
+}
+body .product-title h3,
+body .journal-card h3,
+body .gift-card h3,
+body .maker-grid h3,
+body .values-grid h3,
+body .supply-grid h3 {
+  min-block-size: 0;
+}
+body .product-title h3 {
+  font-size: 24px;
+}
+.product-content, .journal-card > div, .gift-card > div {
+  gap: 8px;
+}
+body .product-content .text-link {
+  margin-top: auto;
+}
+body .testimonial blockquote {
+  font-size: 16px;
+}
+body .legal-copy p {
+  margin-bottom: 20px;
+}
+body .footer-grid h2 {
+  font-size: 22px;
+  min-block-size: 0;
+}
+body .footer-grid > div:first-child > .eyebrow {
+  font-size: 16px;
+}
+.footer-grid > div:not(:first-child) > a {
+  overflow-wrap: anywhere;
+}
+body .farm-hero {
+  min-height: 420px;
+}
+body .farm-hero-content {
+  padding-block: 56px;
+}
+body .account-picture img {
+  height: 420px;
+}
+body .coming-layout {
+  max-width: none;
+}
+body .coming-layout img {
+  height: 280px;
+  margin-block: 20px;
+}
+body .site-footer {
+  padding-top: 28px;
+}
+body .newsletter-section {
+  padding-block: 28px;
+}
+.season-calendar, .taste-guide {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.season-calendar article, .taste-guide > a {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+.season-calendar .text-link, .taste-guide > a > span {
+  margin-top: auto;
+}
+.season-number {
+  font: 36px/1 var(--font-display);
+  color: var(--color-secondary);
+}
+.pairing-layout, .pantry-care {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: stretch;
+  gap: 28px;
+}
+.pairing-layout > img, .pantry-care > img {
+  width: 100%;
+  height: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.pairing-list article {
+  padding-block: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+.pairing-list article:first-child {
+  padding-top: 0;
+}
+.pairing-list article p {
+  margin-bottom: 8px;
+}
+.pantry-care details {
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+  padding-block: 12px;
+}
+.pantry-care summary {
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 44px;
+}
+.harvest-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0;
+  gap: 24px;
+  list-style: none;
+}
+.harvest-steps li {
+  display: flex;
+  gap: 16px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 20px;
+}
+.harvest-steps li > span {
+  font-size: 24px;
+  color: var(--color-secondary);
+}
+@media (max-width: 1023px) {
+  :root {
+    --section-space: 28px;
+  }
+  .container {
+    width: calc(100% - 32px);
+  }
+  body .farm-hero {
+    min-height: 360px;
+  }
+  body .farm-hero-content {
+    padding-block: 40px;
+  }
+  .season-calendar, .taste-guide {
+    gap: 16px;
+  }
+  .season-calendar article, .taste-guide > a {
+    padding: 20px;
+  }
+  body .footer-grid h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 639px) {
+  :root {
+    --section-space: 24px;
+  }
+  .container {
+    width: calc(100% - 24px);
+  }
+  .hero-layout, .editorial, .featured-product,
+  .detail-top, .detail-info, .account-layout,
+  .contact-layout, .enquiry-layout, .gift-builder-layout,
+  .packaging-grid, .bulk-comparison {
+    gap: 20px;
+  }
+  body .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  body .product-image img {
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+  body .footer-grid h2 {
+    font-size: 18px;
+    min-block-size: 2.3em;
+  }
+  body .footer-grid > div:not(:first-child) > a {
+    padding-block: 8px;
+    line-height: 1.5;
+  }
+  .season-calendar, .taste-guide, .harvest-steps,
+  .pairing-layout, .pantry-care {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .pairing-layout > img, .pantry-care > img {
+    height: 230px;
+  }
+  body .farm-hero {
+    min-height: 340px;
+  }
+  body .account-picture img {
+    height: 230px;
+  }
+  body .coming-layout img {
+    height: 200px;
+  }
+  body .section-heading h2 {
+    font-size: 28px;
+  }
+}
+body .flavour-section .section-heading h2,
+body .flavour-section .section-heading p,
+body .flavour-section .section-heading .eyebrow {
+  color: #ffffff;
+}
+.pairing-layout > img {
+  height: 360px;
+}
+.pantry-care > img {
+  height: 320px;
+}
+@media (max-width: 639px) {
+  .pairing-layout > img, .pantry-care > img {
+    height: 230px;
+  }
+}
+/* Paragraph reading size is fixed across every component and breakpoint. */
+body main p,
+body .site-footer p {
+  font-size: 16px !important;
+}
+/* The three harvest jars fill their row on Home 2. */
+body[data-page='home-2.html'] #limited .product-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 639px) {
+  body[data-page='home-2.html'] #limited .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Theme-matched dropdown popup, including the opened mobile picker. */
+select option,
+select optgroup {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+@supports (appearance: base-select) {
+  select,
+  select::picker(select) {
+    appearance: base-select;
+  }
+  select::picker(select) {
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 6px;
+    max-height: 280px;
+    overflow-y: auto;
+    box-shadow: 0 8px 20px #00000040;
+  }
+  select option {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 16px;
+    white-space: normal;
+  }
+  select option:hover,
+  select option:focus,
+  select option:checked {
+    background: var(--color-primary);
+    color: #ffffff;
+  }
+  select::picker-icon {
+    color: var(--color-text);
+  }
+}
+/* Fill the otherwise empty tablet journal row with its remaining story. */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .journal-grid {
+    grid-auto-rows: auto;
+  }
+  .journal-grid > .journal-card {
+    max-width: none;
+    justify-self: stretch;
+    grid-column: auto;
+  }
+  .journal-grid > .journal-card:nth-child(odd of :not([hidden])):nth-last-child(1 of :not([hidden])) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 20px;
+    height: auto;
+  }
+  .journal-grid > .journal-card:nth-child(odd of :not([hidden])):nth-last-child(1 of :not([hidden])) > div {
+    padding-block-start: 0;
+  }
+  .journal-grid > .journal-card:nth-child(odd of :not([hidden])):nth-last-child(1 of :not([hidden])) img {
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+  }
+}
+/* Image boxes keep their crop while the photograph gently moves inside. */
+.hero-photo,
+.inner-hero-image,
+.journal-card > a:not(.text-link),
+.product-image,
+.detail-gallery,
+.account-picture,
+.maker-portrait {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hero-photo img,
+  .inner-hero-image img,
+  .journal-card img,
+  .product-image img,
+  .gift-card > img,
+  .detail-gallery img,
+  .account-picture > img,
+  .maker-portrait img,
+  .farm-story-grid img,
+  .pairing-layout > img,
+  .pantry-care > img {
+    transition: transform 500ms var(--motion-ease);
+  }
+  .hero-photo:hover > img,
+  .inner-hero-image:hover img,
+  .journal-card > a:hover img,
+  .product-image:hover img,
+  .gift-card:hover > img,
+  .detail-gallery:hover img,
+  .account-picture:hover > img,
+  .maker-portrait:hover img {
+    transform: scale(1.035);
+  }
+  .farm-story-grid img:hover,
+  .pairing-layout > img:hover,
+  .pantry-care > img:hover {
+    transform: scale(1.015);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  img {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Only the screenshot spacing: compact bulk enquiry and full-width history. */
+body[data-page='bulk-orders.html'] .enquiry-layout {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+body[data-page='bulk-orders.html'] .enquiry-layout > div:first-child {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  column-gap: 24px;
+}
+body[data-page='bulk-orders.html'] .enquiry-layout > div:first-child > p,
+body[data-page='bulk-orders.html'] .enquiry-layout > div:first-child > h2 {
+  grid-column: 1;
+}
+body[data-page='bulk-orders.html'] .contact-note {
+  grid-column: 2;
+  grid-row: 1 / 4;
+  align-self: center;
+  margin: 0;
+  padding: 20px;
+}
+body[data-page='bulk-orders.html'] .enquiry-form {
+  padding: 24px;
+}
+body[data-page='bulk-orders.html'] .form-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+}
+body[data-page='bulk-orders.html'] .form-field {
+  margin-bottom: 16px;
+}
+body[data-page='bulk-orders.html'] textarea {
+  height: 128px;
+  min-height: 128px;
+}
+body[data-page='about.html'] .timeline {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+body[data-page='about.html'] .timeline li {
+  padding-block: 16px;
+  gap: 24px;
+}
+body[data-page='about.html'] .timeline h3 {
+  margin-bottom: 8px;
+}
+@media (max-width: 639px) {
+  body[data-page='bulk-orders.html'] .enquiry-layout > div:first-child,
+  body[data-page='bulk-orders.html'] .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body[data-page='bulk-orders.html'] .contact-note {
+    grid-column: 1;
+    grid-row: auto;
+    padding: 16px;
+  }
+  body[data-page='bulk-orders.html'] .enquiry-form {
+    padding: 16px;
+  }
+  body[data-page='about.html'] .timeline li {
+    padding-block: 14px;
+    gap: 12px;
+  }
+}
+
+/* The brand mark retains the primary color in every theme and interaction. */
+.brand img,
+html[data-theme='dark'] .brand img {
+  filter: none;
+}
+/* Contact screenshot fixes: fill the FAQ width and compact the social note. */
+body[data-page='contact.html'] .faq-list,
+body[data-page='contact.html'] .faq-list details > p {
+  width: 100%;
+  max-width: none;
+}
+body[data-page='contact.html'] .social-note {
+  width: 100%;
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 32px;
+  align-items: center;
+}
+body[data-page='contact.html'] .social-note > p,
+body[data-page='contact.html'] .social-note > h2 {
+  grid-column: 1;
+}
+body[data-page='contact.html'] .social-note > .btn {
+  grid-column: 2;
+  grid-row: 1 / 4;
+}
+body[data-page='contact.html'] .social-note > p:last-of-type {
+  margin-bottom: 0;
+}
+body[data-page='contact.html'] #social {
+  padding-block: 24px;
+}
+@media (max-width: 767px) {
+  body[data-page='contact.html'] .social-note {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  body[data-page='contact.html'] .social-note > .btn {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: start;
+  }
+  body[data-page='contact.html'] .social-note > p,
+  body[data-page='contact.html'] .social-note > h2 {
+    margin-bottom: 0;
+  }
+}
+
+/* Preserves only: three across, then two plus one centered on smaller screens. */
+body[data-page='products.html'] .product-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 1023px) {
+  body[data-page='products.html'] .product-grid {
+    --preserve-card-gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--preserve-card-gap);
+  }
+  body[data-page='products.html'] .product-grid > .product-card:nth-child(3n of :not([hidden])) {
+    grid-column: 1 / -1;
+    width: calc((100% - var(--preserve-card-gap)) / 2);
+    justify-self: center;
+  }
+}
+@media (max-width: 639px) {
+  body[data-page='products.html'] .product-grid {
+    --preserve-card-gap: 14px;
+  }
+  body[data-page='products.html'] .product-title {
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+  }
+  body[data-page='products.html'] .product-title h3 {
+    width: 100%;
+  }
+  body[data-page='products.html'] .product-content {
+    padding-inline: 0;
+  }
+}
+
+/* Requested FAQ widths and journal empty-column fix. */
+body[data-page='bulk-orders.html'] .faq-list,
+body[data-page='product-details.html'] .faq-list {
+  width: 100%;
+  max-width: none;
+}
+body[data-page='blog-details.html'] .article-layout {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+}
+body[data-page='blog-details.html'] .article-sidebar {
+  border-inline-start: 0;
+  padding-inline-start: 0;
+  border-block-start: 1px solid var(--color-border);
+  padding-block-start: 24px;
+}
+
+/* Compact, balanced journal detail layout; existing content is retained. */
+body[data-page='blog-details.html'] .article-body > section p {
+  max-width: none;
+}
+body[data-page='blog-details.html'] .article-quote {
+  margin-block: 24px;
+  padding: 24px 32px;
+  background: var(--color-soft);
+  border-radius: var(--radius);
+}
+body[data-page='blog-details.html'] .article-sidebar {
+  padding-block-start: 28px;
+}
+body[data-page='blog-details.html'] .sidebar-search {
+  max-width: 440px;
+}
+@media (min-width: 1024px) {
+  body[data-page='blog-details.html'] .article-body {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 32px;
+  }
+  body[data-page='blog-details.html'] .article-body > * {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+  body[data-page='blog-details.html'] .article-body > section {
+    grid-column: auto;
+    margin-bottom: 8px;
+    padding-block: 8px 20px;
+    border-block-end: 1px solid var(--color-border);
+  }
+  body[data-page='blog-details.html'] .article-body > section h2 {
+    font-size: clamp(24px, 2vw, 32px);
+  }
+}
+@media (min-width: 768px) {
+  body[data-page='blog-details.html'] .article-sidebar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 32px;
+    align-items: start;
+  }
+  body[data-page='blog-details.html'] .article-sidebar > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 24px;
+  }
+  body[data-page='blog-details.html'] .sidebar-search {
+    grid-column: 1;
+    grid-row: 2 / 7;
+  }
+  body[data-page='blog-details.html'] .article-sidebar > h3 {
+    margin: 0 0 12px;
+  }
+  body[data-page='blog-details.html'] .article-sidebar > :nth-child(3) { grid-column: 2; grid-row: 2; }
+  body[data-page='blog-details.html'] .article-sidebar > :nth-child(4) { grid-column: 2; grid-row: 3; }
+  body[data-page='blog-details.html'] .article-sidebar > :nth-child(5) { grid-column: 2; grid-row: 4; }
+  body[data-page='blog-details.html'] .article-sidebar > :nth-child(6) { grid-column: 2; grid-row: 5; }
+  body[data-page='blog-details.html'] .article-sidebar > :nth-child(7) { grid-column: 2; grid-row: 6; }
+  body[data-page='blog-details.html'] .article-sidebar > :nth-child(8) { grid-column: 3; grid-row: 2; }
+  body[data-page='blog-details.html'] .article-sidebar > :nth-child(9) { grid-column: 3; grid-row: 3; }
+  body[data-page='blog-details.html'] .article-sidebar > :nth-child(10) { grid-column: 3; grid-row: 4; }
+  body[data-page='blog-details.html'] .article-sidebar > :nth-child(11) { grid-column: 3; grid-row: 5; }
+  body[data-page='blog-details.html'] .sidebar-callout {
+    grid-column: 1 / -1;
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 24px;
+    align-items: center;
+  }
+  body[data-page='blog-details.html'] .sidebar-callout .eyebrow { margin-bottom: 8px; }
+  body[data-page='blog-details.html'] .sidebar-callout h3 { grid-column: 1; margin: 0; }
+  body[data-page='blog-details.html'] .sidebar-callout .btn { grid-column: 2; grid-row: 1 / 3; }
+}
+body[data-page='blog-details.html'] .article-body[hidden] {
+  display: none;
+}
+
+/* Targeted screenshot fixes: Pricing FAQ and Home 1 / Home 2 alignment. */
+body[data-page='pricing.html'] .faq-list {
+  width: 100%;
+  max-width: none;
+}
+@media (min-width: 640px) {
+  body[data-page='home-2.html'] .pairing-layout {
+    align-items: stretch;
+  }
+  body[data-page='home-2.html'] .pairing-layout > img {
+    height: 0;
+    min-height: 100%;
+    max-height: none;
+    align-self: stretch;
+    object-fit: cover;
+  }
+}
+@media (min-width: 640px) and (max-width: 1199px) {
+  body[data-page='index.html'] .values-grid {
+    grid-template-rows: auto auto auto;
+    row-gap: 0;
+    align-items: stretch;
+  }
+  body[data-page='index.html'] .values-grid > article {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    align-content: start;
+    text-align: start;
+  }
+  body[data-page='index.html'] .values-grid h3 {
+    min-block-size: 2.6em;
+    margin-bottom: 16px;
+  }
+  body[data-page='index.html'] .featured-product > div {
+    min-width: 0;
+  }
+  body[data-page='index.html'] .featured-product > div:last-child {
+    text-align: start;
+  }
+  body[data-page='home-2.html'] .harvest-steps {
+    grid-template-rows: auto auto;
+    row-gap: 0;
+    align-items: stretch;
+  }
+  body[data-page='home-2.html'] .harvest-steps > li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+    gap: 0 12px;
+    text-align: start;
+  }
+  body[data-page='home-2.html'] .harvest-steps > li > div {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+    min-width: 0;
+  }
+  body[data-page='home-2.html'] .harvest-steps h3 {
+    min-block-size: 2.6em;
+    margin-bottom: 16px;
+  }
+  body[data-page='home-2.html'] .harvest-steps p {
+    margin-bottom: 0;
+  }
+  body[data-page='home-2.html'] .newsletter {
+    align-items: start;
+  }
+  body[data-page='home-2.html'] .newsletter > div,
+  body[data-page='home-2.html'] .newsletter-form {
+    min-width: 0;
+    text-align: start;
+  }
+}
+
+/* Follow-up screenshot fixes: Product list, seasons and gifting. */
+@media (max-width: 1199px) {
+  body[data-page='products.html'] .product-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body[data-page='products.html'] .product-grid > .product-card,
+  body[data-page='products.html'] .product-grid > .product-card:nth-child(3n of :not([hidden])) {
+    grid-column: 1;
+    width: 100%;
+    justify-self: stretch;
+    min-width: 0;
+  }
+}
+@media (min-width: 640px) and (max-width: 1199px) {
+  body[data-page='home-2.html'] .season-calendar {
+    grid-template-rows: auto auto 1fr auto;
+    row-gap: 12px;
+  }
+  body[data-page='home-2.html'] .season-calendar > article {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    align-items: start;
+    text-align: start;
+  }
+  body[data-page='home-2.html'] .season-calendar h3 {
+    min-block-size: 2.6em;
+    margin-bottom: 0;
+  }
+  body[data-page='home-2.html'] .season-calendar p {
+    margin-bottom: 0;
+  }
+  body[data-page='home-2.html'] .season-calendar .text-link {
+    align-self: end;
+    margin-top: 0;
+  }
+}
+@media (min-width: 768px) {
+  body[data-page='gifting.html'] .gift-builder-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  body[data-page='gifting.html'] .gift-builder-layout > div > h2 br {
+    display: none;
+  }
+  body[data-page='gifting.html'] .gift-builder-layout > div > p:last-child {
+    margin-bottom: 0;
+    max-width: none;
+  }
+  body[data-page='gifting.html'] .gift-builder {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 20px 28px;
+    align-items: start;
+  }
+  body[data-page='gifting.html'] .gift-builder > fieldset,
+  body[data-page='gifting.html'] .gift-builder > .form-field {
+    margin-bottom: 0;
+    min-width: 0;
+  }
+  body[data-page='gifting.html'] .gift-builder textarea {
+    min-height: 216px;
+  }
+  body[data-page='gifting.html'] .gift-builder > button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+  body[data-page='gifting.html'] .gift-builder > .form-status {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  body[data-page='gifting.html'] .packaging-grid {
+    align-items: stretch;
+  }
+  body[data-page='gifting.html'] .packaging-grid > div:first-child {
+    position: relative;
+    min-height: 280px;
+  }
+  body[data-page='gifting.html'] .packaging-grid img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+  }
+  body[data-page='gifting.html'] .packaging-grid > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+  body[data-page='gifting.html'] .packaging-grid .check-list {
+    margin-bottom: 0;
+  }
+}
+
+/* Bulk format and process text alignment at tablet widths. */
+@media (min-width: 640px) and (max-width: 1199px) {
+  body[data-page='bulk-orders.html'] .format-grid {
+    grid-template-rows: auto auto 1fr;
+    row-gap: 12px;
+  }
+  body[data-page='bulk-orders.html'] .format-grid > article {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    align-items: start;
+    text-align: start;
+  }
+  body[data-page='bulk-orders.html'] .format-grid h3 {
+    min-block-size: 2.6em;
+    margin: 0;
+  }
+  body[data-page='bulk-orders.html'] .format-grid p,
+  body[data-page='bulk-orders.html'] .format-size {
+    margin-bottom: 0;
+  }
+  body[data-page='bulk-orders.html'] .process-list {
+    grid-template-rows: auto auto auto;
+    row-gap: 12px;
+  }
+  body[data-page='bulk-orders.html'] .process-list > li {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    align-items: start;
+    text-align: start;
+  }
+  body[data-page='bulk-orders.html'] .process-list > li > div {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+  }
+  body[data-page='bulk-orders.html'] .process-list h3 {
+    min-block-size: 2.6em;
+    margin-bottom: 0;
+  }
+}
+/* Contact information and form share the full width, avoiding a vacant column. */
+@media (min-width: 640px) {
+  body[data-page='contact.html'] .contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+  body[data-page='contact.html'] .contact-layout > div > h2 br {
+    display: none;
+  }
+  body[data-page='contact.html'] .contact-layout > div > p {
+    max-width: none;
+  }
+  body[data-page='contact.html'] .contact-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 24px;
+    margin-block: 24px;
+  }
+  body[data-page='contact.html'] .contact-details dt {
+    margin: 0;
+  }
+  body[data-page='contact.html'] .contact-details dd {
+    margin: 0 0 16px;
+    overflow-wrap: anywhere;
+  }
+  body[data-page='contact.html'] .contact-details > :nth-child(1) { grid-column: 1; grid-row: 1; }
+  body[data-page='contact.html'] .contact-details > :nth-child(2) { grid-column: 1; grid-row: 2; }
+  body[data-page='contact.html'] .contact-details > :nth-child(3) { grid-column: 2; grid-row: 1; }
+  body[data-page='contact.html'] .contact-details > :nth-child(4) { grid-column: 2; grid-row: 2; }
+  body[data-page='contact.html'] .contact-details > :nth-child(5) { grid-column: 1; grid-row: 3; }
+  body[data-page='contact.html'] .contact-details > :nth-child(6) { grid-column: 1; grid-row: 4; }
+  body[data-page='contact.html'] .contact-details > :nth-child(7) { grid-column: 2; grid-row: 3; }
+  body[data-page='contact.html'] .contact-details > :nth-child(8) { grid-column: 2; grid-row: 4; }
+  body[data-page='contact.html'] .enquiry-form,
+  body[data-page='contact.html'] .form-grid {
+    min-width: 0;
+    width: 100%;
+  }
+  body[data-page='contact.html'] .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  body[data-page='contact.html'] .contact-details {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  body[data-page='contact.html'] .contact-details > :nth-child(5) { grid-column: 3; grid-row: 1; }
+  body[data-page='contact.html'] .contact-details > :nth-child(6) { grid-column: 3; grid-row: 2; }
+  body[data-page='contact.html'] .contact-details > :nth-child(7) { grid-column: 4; grid-row: 1; }
+  body[data-page='contact.html'] .contact-details > :nth-child(8) { grid-column: 4; grid-row: 2; }
+}
+
+/* Pantry Bundles FAQ uses the full content width, including expanded answers. */
+body[data-page='pricing.html'] .faq-list,
+body[data-page='pricing.html'] .faq-list details > p {
+  width: 100%;
+  max-width: none;
+}
+@media (min-width: 640px) {
+  body[data-page='contact.html'] .form-field:has(#field-subject) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Targeted follow-up: gift note, care image, last journal card, product gallery. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  body[data-page='gifting.html'] .gift-builder {
+    align-items: stretch;
+  }
+  body[data-page='gifting.html'] .gift-builder > .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+  body[data-page='gifting.html'] .gift-builder textarea {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+  }
+}
+@media (min-width: 640px) {
+  body[data-page='home-2.html'] .pantry-care {
+    align-items: stretch;
+  }
+  body[data-page='home-2.html'] .pantry-care > img {
+    height: 0;
+    min-height: 100%;
+    max-height: none;
+    align-self: stretch;
+    object-fit: cover;
+  }
+  body[data-page='home-2.html'] .pantry-care > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+  }
+  body[data-page='product-details.html'] .detail-top {
+    align-items: stretch;
+  }
+  body[data-page='product-details.html'] .product-gallery {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    min-width: 0;
+  }
+  body[data-page='product-details.html'] .gallery-main {
+    position: relative;
+    min-height: 320px;
+  }
+  body[data-page='product-details.html'] .gallery-main img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+}
+@media (min-width: 640px) and (max-width: 1199px) {
+  .journal-grid > .journal-card:nth-child(odd of :not([hidden])):nth-last-child(1 of :not([hidden])) {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+    display: flex;
+    flex-direction: column;
+  }
+  .journal-grid > .journal-card:nth-child(odd of :not([hidden])):nth-last-child(1 of :not([hidden])) > a {
+    width: 100%;
+  }
+  .journal-grid > .journal-card:nth-child(odd of :not([hidden])):nth-last-child(1 of :not([hidden])) img {
+    width: 100%;
+    height: 280px;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+  .journal-grid > .journal-card:nth-child(odd of :not([hidden])):nth-last-child(1 of :not([hidden])) > div {
+    width: 100%;
+    min-width: 0;
+    padding-inline: 0;
+  }
+}
